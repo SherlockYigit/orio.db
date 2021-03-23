@@ -105,7 +105,7 @@ module.exports = ({
   */
   has(key) {
     let data = dbManager(options.adapter).all(options.path, options.name);
-    data = data.find(val => val.ID === key.split(".")[0]);
+    data = data.find((val) => val.ID === key.split(".")[0]);
     
     if (!data) {
       return Boolean(data);
@@ -131,7 +131,13 @@ module.exports = ({
       throw new Error("You must spesify a Number!");
     } else {
       let data = dbManager(options.adapter).all(options.path, options.name);
-      data = data.some(val => val.ID === key[0]) ? baseGet(key, data.find(val => val.ID === key[0]).data) : 0;
+      data = data.some((val) => val.ID === key[0]) ? (
+        key.length > 1 
+        ?
+        baseGet(key, data.find((val) => val.ID === key[0]).data)
+        : 
+        data.find((val) => val.ID === key[0]).data
+      ) : 0;
      
       if (isNaN(data)) {
         throw new Error("This old data must be a number!")
@@ -156,7 +162,13 @@ module.exports = ({
       throw new Error("You must spesify a Number!");
     } else {
       let data = dbManager(options.adapter).all(options.path, options.name);
-      data = data.some(val => val.ID === key[0]) ? baseGet(key, data.find(val => val.ID === key[0]).data) : 0;
+      data = data.some((val) => val.ID === key[0]) ? (
+        key.length > 1 
+        ?
+        baseGet(key, data.find((val) => val.ID === key[0]).data)
+        : 
+        data.find((val) => val.ID === key[0]).data
+      ) : 0;
      
       if (isNaN(data)) {
         throw new Error("This old data must be a number!")
@@ -181,7 +193,7 @@ module.exports = ({
       throw new Error("You must spesify a Value!");
     } else {
       let data = dbManager(options.adapter).all(options.path, options.name);
-      data = data.find(val => val.ID === key[0]) || [];
+      data = data.find((val) => val.ID === key[0]) || [];
       
       if (data) {    
         if (typeof data.data === "object" && !Array.isArray(data.data)) {
@@ -216,7 +228,7 @@ module.exports = ({
       throw new Error("You must spesify a Value!");
     } else {
       let data = dbManager(options.adapter).all(options.path, options.name);
-      data = data.find(val => val.ID === key[0]) || [];
+      data = data.find((val) => val.ID === key[0]) || [];
      
       if (data) {
         if (typeof data.data === "object" && !Array.isArray(data.data)) {
