@@ -5,8 +5,8 @@
 | Documentation | Developer blog |
 | :--: | :--: |
 | [orio.db-docs](https://sherlockyigit.github.io/orio.db-docs) | *Soon..* |
-## Changelog (2.1.1)
-* Bugs in `push` and `unpush` functions have been fixed.
+## Changelog (2.1.2)
+* Bugs in `add` and `substract` functions have been fixed.
 
 ## Examples
 ### Using with default settings 
