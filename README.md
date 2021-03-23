@@ -5,8 +5,8 @@
 | Documentation | Developer blog |
 | :--: | :--: |
 | [orio.db-docs](https://sherlockyigit.github.io/orio.db-docs) | *Soon..* |
-## Changelog (2.1.0)
-* Some bugs and errors were fixed. 
+## Changelog (2.1.1)
+* Bugs in `push` and `unpush` functions have been fixed.
 
 ## Examples
 ### Using with default settings 
@@ -116,3 +116,8 @@ db.delete("user");
 db.deleteAll();
 // > true or false
 ```
+
+## Support Server 
+<a href="https://discord.gg/YdHRnsc"><img src="https://invidget.switchblade.xyz/YdHRnsc"></a>
+## Sponsor Server
+<a href="https://discord.gg/2mbTGR8YrX"><img src="https://invidget.switchblade.xyz/2mbTGR8YrX"></a>
